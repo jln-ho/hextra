@@ -1,5 +1,6 @@
 {{ $rows := .Get "rows" | default "3" }}
+{{ $cols := .Get "cols" | default "1fr 1fr"}}
 
-<div class="hextra-cards mt-4 gap-4 grid not-prose" style="--rows: {{ $rows }};">
+<div class="hextra-cards mt-4 gap-4 grid not-prose" style="--rows: {{ $rows }}; grid-template-columns: {{ $cols }}">
   {{- .Inner -}}
 </div>
